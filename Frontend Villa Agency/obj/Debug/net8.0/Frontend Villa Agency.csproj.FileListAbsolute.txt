@@ -1,0 +1,31 @@
+/home/harsh/1-My-Files/codes/dot net/All Programs/Frontend Villa Agency/bin/Debug/net8.0/appsettings.Development.json
+/home/harsh/1-My-Files/codes/dot net/All Programs/Frontend Villa Agency/bin/Debug/net8.0/appsettings.json
+/home/harsh/1-My-Files/codes/dot net/All Programs/Frontend Villa Agency/bin/Debug/net8.0/Frontend Villa Agency.staticwebassets.runtime.json
+/home/harsh/1-My-Files/codes/dot net/All Programs/Frontend Villa Agency/bin/Debug/net8.0/Frontend Villa Agency
+/home/harsh/1-My-Files/codes/dot net/All Programs/Frontend Villa Agency/bin/Debug/net8.0/Frontend Villa Agency.deps.json
+/home/harsh/1-My-Files/codes/dot net/All Programs/Frontend Villa Agency/bin/Debug/net8.0/Frontend Villa Agency.runtimeconfig.json
+/home/harsh/1-My-Files/codes/dot net/All Programs/Frontend Villa Agency/bin/Debug/net8.0/Frontend Villa Agency.dll
+/home/harsh/1-My-Files/codes/dot net/All Programs/Frontend Villa Agency/bin/Debug/net8.0/Frontend Villa Agency.pdb
+/home/harsh/1-My-Files/codes/dot net/All Programs/Frontend Villa Agency/obj/Debug/net8.0/Frontend Villa Agency.GeneratedMSBuildEditorConfig.editorconfig
+/home/harsh/1-My-Files/codes/dot net/All Programs/Frontend Villa Agency/obj/Debug/net8.0/Frontend Villa Agency.AssemblyInfoInputs.cache
+/home/harsh/1-My-Files/codes/dot net/All Programs/Frontend Villa Agency/obj/Debug/net8.0/Frontend Villa Agency.AssemblyInfo.cs
+/home/harsh/1-My-Files/codes/dot net/All Programs/Frontend Villa Agency/obj/Debug/net8.0/Frontend Villa Agency.csproj.CoreCompileInputs.cache
+/home/harsh/1-My-Files/codes/dot net/All Programs/Frontend Villa Agency/obj/Debug/net8.0/Frontend Villa Agency.MvcApplicationPartsAssemblyInfo.cache
+/home/harsh/1-My-Files/codes/dot net/All Programs/Frontend Villa Agency/obj/Debug/net8.0/Frontend Villa Agency.RazorAssemblyInfo.cache
+/home/harsh/1-My-Files/codes/dot net/All Programs/Frontend Villa Agency/obj/Debug/net8.0/Frontend Villa Agency.RazorAssemblyInfo.cs
+/home/harsh/1-My-Files/codes/dot net/All Programs/Frontend Villa Agency/obj/Debug/net8.0/Frontend Villa Agency.sourcelink.json
+/home/harsh/1-My-Files/codes/dot net/All Programs/Frontend Villa Agency/obj/Debug/net8.0/staticwebassets.build.json
+/home/harsh/1-My-Files/codes/dot net/All Programs/Frontend Villa Agency/obj/Debug/net8.0/staticwebassets.development.json
+/home/harsh/1-My-Files/codes/dot net/All Programs/Frontend Villa Agency/obj/Debug/net8.0/staticwebassets/msbuild.Frontend Villa Agency.Microsoft.AspNetCore.StaticWebAssets.props
+/home/harsh/1-My-Files/codes/dot net/All Programs/Frontend Villa Agency/obj/Debug/net8.0/staticwebassets/msbuild.build.Frontend Villa Agency.props
+/home/harsh/1-My-Files/codes/dot net/All Programs/Frontend Villa Agency/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.Frontend Villa Agency.props
+/home/harsh/1-My-Files/codes/dot net/All Programs/Frontend Villa Agency/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.Frontend Villa Agency.props
+/home/harsh/1-My-Files/codes/dot net/All Programs/Frontend Villa Agency/obj/Debug/net8.0/staticwebassets.pack.json
+/home/harsh/1-My-Files/codes/dot net/All Programs/Frontend Villa Agency/obj/Debug/net8.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
+/home/harsh/1-My-Files/codes/dot net/All Programs/Frontend Villa Agency/obj/Debug/net8.0/scopedcss/bundle/Frontend Villa Agency.styles.css
+/home/harsh/1-My-Files/codes/dot net/All Programs/Frontend Villa Agency/obj/Debug/net8.0/scopedcss/projectbundle/Frontend Villa Agency.bundle.scp.css
+/home/harsh/1-My-Files/codes/dot net/All Programs/Frontend Villa Agency/obj/Debug/net8.0/Frontend Villa Agency.dll
+/home/harsh/1-My-Files/codes/dot net/All Programs/Frontend Villa Agency/obj/Debug/net8.0/refint/Frontend Villa Agency.dll
+/home/harsh/1-My-Files/codes/dot net/All Programs/Frontend Villa Agency/obj/Debug/net8.0/Frontend Villa Agency.pdb
+/home/harsh/1-My-Files/codes/dot net/All Programs/Frontend Villa Agency/obj/Debug/net8.0/Frontend Villa Agency.genruntimeconfig.cache
+/home/harsh/1-My-Files/codes/dot net/All Programs/Frontend Villa Agency/obj/Debug/net8.0/ref/Frontend Villa Agency.dll
