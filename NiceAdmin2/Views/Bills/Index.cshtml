@@ -1,0 +1,63 @@
+@model System.Data.DataTable;
+@using System.Data;
+@{
+    Layout = "_Layout";
+}
+<main id="main" class="main">
+
+    <div class="row">
+        <div class="col-lg-12">
+
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <h5 class="col-3 card-title">Bills Table</h5>
+                        <h5 class="col"></h5>
+                        <h5 class="col-1 my-2 ml-2">
+                            <a class="btn btn-primary" asp-controller="Bills" asp-action="AddEditBills">Add+</a>
+                        </h5>
+                    </div>
+
+                    <!-- Default Table -->
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th class="col">Bill ID</th>
+                            <th class="col">Bill Number</th>
+                            <th class="col">Bill Date</th>
+                            <th class="col">Order ID</th>
+                            <th class="col">Total Amount</th>
+                            <th class="col">Discount</th>
+                            <th class="col">Net Amount</th>
+                            <th class="col">UserID</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        @foreach (DataRow bill in Model.Rows)
+                        {
+                            <tr>
+                                <td class="col">@bill["BillID"]</td>
+                                <td class="col">@bill["BillNumber"]</td>
+                                <td class="col">@bill["BillDate"]</td>
+                                <td class="col">@bill["OrderID"]</td>
+                                <td class="col">@bill["TotalAmount"]</td>
+                                <td class="col">@bill["Discount"]</td>
+                                <td class="col">@bill["NetAmount"]</td>
+                                <td class="col">@bill["UserID"]</td>
+                                <td>
+                                    <button class="btn btn-primary">Edit</button>
+                                    <button class="btn btn-danger">Delete</button>
+                                </td>
+                            </tr>
+                        }
+                        </tbody>
+                    </table>
+                    <!-- End Default Table Example -->
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</main>

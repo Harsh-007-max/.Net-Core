@@ -18,11 +18,35 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Privacy()
+    public IActionResult userProfile()
     {
         return View();
     }
 
+    public IActionResult pagesFaq()
+    {
+        return View();
+    }
+
+    public IActionResult pagesContact()
+    {
+        return View();
+    }
+
+    public IActionResult pagesRegister()
+    {
+        return View();
+    }
+
+    public IActionResult error404()
+    {
+        return View();
+    }
+
+    public IActionResult pagesBlank()
+    {
+        return View();
+    }
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {

@@ -1,0 +1,60 @@
+@model System.Data.DataTable;
+@using System.Data;
+@{
+    Layout ="_Layout";
+}
+<main id="main" class="main">
+
+    <div class="row">
+        <div class="col-lg-12">
+
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <h5 class="col-3 card-title">User Table</h5>
+                        <h5 class="col"></h5>
+                        <h5 class="col-1 my-2 ml-2">
+                            <a class="btn btn-primary" asp-controller="User" asp-action="AddEditUser">Add+</a>
+                        </h5>
+                    </div>
+
+                    <!-- Default Table -->
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col">User ID</th>
+                            <th scope="col">User Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Password</th>
+                            <th scope="col">Mobile No</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">IsActive</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        @foreach (DataRow user in Model.Rows)
+                        {
+                            <tr>
+                                <td>@user["UserID"]</td>
+                                <td>@user["UserName"]</td>
+                                <td>@user["Email"]</td>
+                                <td>@user["Password"]</td>
+                                <td>@user["MobileNo"]</td>
+                                <td>@user["Address"]</td>
+                                <td>@user["IsActive"]</td>
+                                <td>
+                                    <button class="btn btn-primary">Edit</button>
+                                    <button class="btn btn-danger">Delete</button>
+                                </td>
+                            </tr>
+                        }
+                        </tbody>
+                    </table>
+                    <!-- End Default Table Example -->
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</main>

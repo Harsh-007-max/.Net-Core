@@ -10,6 +10,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "creative-CV", "creative-CV\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NiceAdmin", "NiceAdmin\NiceAdmin.csproj", "{CF9B9F3D-D817-46DF-8171-C891C2162E76}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NiceAdmin2", "NiceAdmin2\NiceAdmin2.csproj", "{0BB06103-3383-49D4-9B06-C352022038B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Class Code", "Class Code\Class Code.csproj", "{B28A09F2-82C3-4608-B2F4-C6E9A7965E2D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +40,13 @@ Global
 		{CF9B9F3D-D817-46DF-8171-C891C2162E76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF9B9F3D-D817-46DF-8171-C891C2162E76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF9B9F3D-D817-46DF-8171-C891C2162E76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BB06103-3383-49D4-9B06-C352022038B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BB06103-3383-49D4-9B06-C352022038B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BB06103-3383-49D4-9B06-C352022038B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BB06103-3383-49D4-9B06-C352022038B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B28A09F2-82C3-4608-B2F4-C6E9A7965E2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B28A09F2-82C3-4608-B2F4-C6E9A7965E2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B28A09F2-82C3-4608-B2F4-C6E9A7965E2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B28A09F2-82C3-4608-B2F4-C6E9A7965E2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -1,0 +1,58 @@
+@model NiceAdmin2.Models.BillsModel;
+
+@{
+    Layout = "_Layout";
+}
+<div id="main">
+    <div class="card">
+        <div class="card-body p-3">
+            <h5>Add New Bill</h5>
+            <form method="post" asp-action="Save" asp-controller="Bills">
+                @Html.HiddenFor(x=>x.BillId)
+                <div class="container">
+                    <div class="row m-2 my-4">
+                        <div class="col">
+                            <label class="form-label" asp-for="UserID">Enter User ID:<span class="text-danger">*</span></label><br/>
+                            <input class="form-control" type="text" placeholder="User ID" asp-for="UserID"/>
+                            <span asp-validation-for="UserID" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row m-2 my-4">
+                        <div class="col">
+                            <label class="form-label" asp-for="BillNumber">Enter Bill Number:<span class="text-danger">*</span></label><br/>
+                            <input class="form-control" type="text" placeholder="Bill Number" asp-for="BillNumber"/>
+                            <span asp-validation-for="BillNumber" class="text-danger"></span>
+                        </div>
+                        <div class="col">
+                            <label class="form-label" asp-for="BillDate">Enter Bill Date:<span class="text-danger">*</span></label><br/>
+                            <input class="form-control" type="date" asp-for="BillDate"/>
+                            <span asp-validation-for="BillDate" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row m-2 my-4">
+                        <div class="col">
+                            <label class="form-label" asp-for="Discount">Enter Discount:<span class="text-danger">*</span></label><br/>
+                            <input class="form-control" type="text" placeholder="Discount" asp-for="Discount"/>
+                            <span asp-validation-for="Discount" class="text-danger"></span>
+                        </div>
+                        <div class="col">
+                            <label class="form-label" asp-for="TotalAmount">Enter Total Amount:<span class="text-danger">*</span></label><br/>
+                            <input class="form-control" type="text" placeholder="Total Amount" asp-for="TotalAmount"/>
+                            <span asp-validation-for="TotalAmount" class="text-danger"></span>
+                        </div>
+                        <div class="col">
+                            <label class="form-label" asp-for="NetAmount">Enter Net amount:<span class="text-danger">*</span></label><br/>
+                            <input class="form-control" type="text" placeholder="Net amount" asp-for="NetAmount"/>
+                            <span asp-validation-for="NetAmount" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row m-2">
+                        <div class="col-2 m-3">
+                            <input type="submit" class="btn btn-primary" placeholder="Submit"/>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

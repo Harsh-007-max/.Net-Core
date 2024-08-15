@@ -1,0 +1,31 @@
+/home/harsh/1-My-Files/codes/dot net/All Programs/Class Code/bin/Debug/net8.0/appsettings.Development.json
+/home/harsh/1-My-Files/codes/dot net/All Programs/Class Code/bin/Debug/net8.0/appsettings.json
+/home/harsh/1-My-Files/codes/dot net/All Programs/Class Code/bin/Debug/net8.0/Class Code.staticwebassets.runtime.json
+/home/harsh/1-My-Files/codes/dot net/All Programs/Class Code/bin/Debug/net8.0/Class Code
+/home/harsh/1-My-Files/codes/dot net/All Programs/Class Code/bin/Debug/net8.0/Class Code.deps.json
+/home/harsh/1-My-Files/codes/dot net/All Programs/Class Code/bin/Debug/net8.0/Class Code.runtimeconfig.json
+/home/harsh/1-My-Files/codes/dot net/All Programs/Class Code/bin/Debug/net8.0/Class Code.dll
+/home/harsh/1-My-Files/codes/dot net/All Programs/Class Code/bin/Debug/net8.0/Class Code.pdb
+/home/harsh/1-My-Files/codes/dot net/All Programs/Class Code/obj/Debug/net8.0/Class Code.GeneratedMSBuildEditorConfig.editorconfig
+/home/harsh/1-My-Files/codes/dot net/All Programs/Class Code/obj/Debug/net8.0/Class Code.AssemblyInfoInputs.cache
+/home/harsh/1-My-Files/codes/dot net/All Programs/Class Code/obj/Debug/net8.0/Class Code.AssemblyInfo.cs
+/home/harsh/1-My-Files/codes/dot net/All Programs/Class Code/obj/Debug/net8.0/Class Code.csproj.CoreCompileInputs.cache
+/home/harsh/1-My-Files/codes/dot net/All Programs/Class Code/obj/Debug/net8.0/Class Code.MvcApplicationPartsAssemblyInfo.cache
+/home/harsh/1-My-Files/codes/dot net/All Programs/Class Code/obj/Debug/net8.0/Class Code.RazorAssemblyInfo.cache
+/home/harsh/1-My-Files/codes/dot net/All Programs/Class Code/obj/Debug/net8.0/Class Code.RazorAssemblyInfo.cs
+/home/harsh/1-My-Files/codes/dot net/All Programs/Class Code/obj/Debug/net8.0/Class Code.sourcelink.json
+/home/harsh/1-My-Files/codes/dot net/All Programs/Class Code/obj/Debug/net8.0/staticwebassets.build.json
+/home/harsh/1-My-Files/codes/dot net/All Programs/Class Code/obj/Debug/net8.0/staticwebassets.development.json
+/home/harsh/1-My-Files/codes/dot net/All Programs/Class Code/obj/Debug/net8.0/staticwebassets/msbuild.Class Code.Microsoft.AspNetCore.StaticWebAssets.props
+/home/harsh/1-My-Files/codes/dot net/All Programs/Class Code/obj/Debug/net8.0/staticwebassets/msbuild.build.Class Code.props
+/home/harsh/1-My-Files/codes/dot net/All Programs/Class Code/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.Class Code.props
+/home/harsh/1-My-Files/codes/dot net/All Programs/Class Code/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.Class Code.props
+/home/harsh/1-My-Files/codes/dot net/All Programs/Class Code/obj/Debug/net8.0/staticwebassets.pack.json
+/home/harsh/1-My-Files/codes/dot net/All Programs/Class Code/obj/Debug/net8.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
+/home/harsh/1-My-Files/codes/dot net/All Programs/Class Code/obj/Debug/net8.0/scopedcss/bundle/Class Code.styles.css
+/home/harsh/1-My-Files/codes/dot net/All Programs/Class Code/obj/Debug/net8.0/scopedcss/projectbundle/Class Code.bundle.scp.css
+/home/harsh/1-My-Files/codes/dot net/All Programs/Class Code/obj/Debug/net8.0/Class Code.dll
+/home/harsh/1-My-Files/codes/dot net/All Programs/Class Code/obj/Debug/net8.0/refint/Class Code.dll
+/home/harsh/1-My-Files/codes/dot net/All Programs/Class Code/obj/Debug/net8.0/Class Code.pdb
+/home/harsh/1-My-Files/codes/dot net/All Programs/Class Code/obj/Debug/net8.0/Class Code.genruntimeconfig.cache
+/home/harsh/1-My-Files/codes/dot net/All Programs/Class Code/obj/Debug/net8.0/ref/Class Code.dll

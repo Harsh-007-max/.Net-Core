@@ -1,0 +1,53 @@
+@model NiceAdmin2.Models.ProductModel;
+
+@{
+    Layout = "_Layout";
+}
+<div id="main">
+    <div class="card">
+        <div class="card-body p-3">
+            <h5>Add New Product</h5>
+            <form method="post" asp-action="Save" asp-controller="Product">
+                @Html.HiddenFor(x=>x.ProductID)
+                <div class="container">
+                    <div class="row m-2 my-4">
+                        <div class="col">
+                            <label class="form-label" asp-for="UserID">Select User:<span class="text-danger">*</span></label><br/>
+                            <select class="form-control" asp-for="UserID" asp-items="@(new SelectList(ViewBag.UserList, "UserID", "UserName"))">
+                                <option value="">Select User</option>
+                            </select>
+                            <span asp-validation-for="UserID" class="text-danger"></span>
+                        </div>
+                        <div class="col">
+                            <label class="form-label" asp-for="ProductName">Enter Product Name:<span class="text-danger">*</span></label><br/>
+                            <input class="form-control" type="text" placeholder="Product Name" asp-for="ProductName"/>
+                            <span asp-validation-for="ProductName" class="text-danger"></span>
+                        </div>
+                        <div class="col">
+                            <label class="form-label" asp-for="ProductPrice">Enter Product Price:<span class="text-danger">*</span></label><br/>
+                            <input class="form-control" type="text" placeholder="Product Price" asp-for="ProductPrice"/>
+                            <span asp-validation-for="ProductPrice" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row m-2 my-4">
+                        <div class="col">
+                            <label class="form-label" asp-for="ProductCode">Enter Product Code:<span class="text-danger">*</span></label><br/>
+                            <input class="form-control" type="text" placeholder="Product Code" asp-for="ProductCode"/>
+                            <span asp-validation-for="ProductName" class="text-danger"></span>
+                        </div>
+                        <div class="col">
+                            <label class="form-label" asp-for="Description">Enter Product Description:<span class="text-danger">*</span></label><br/>
+                            <input class="form-control" type="text" placeholder="Product Description" asp-for="Description"/>
+                            <span asp-validation-for="ProductPrice" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row m-2">
+                        <div class="col-2 m-3">
+                            <input type="submit" class="btn btn-primary" placeholder="Submit"/>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

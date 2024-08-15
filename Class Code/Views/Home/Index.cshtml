@@ -1,0 +1,81 @@
+﻿@model Class_Code.Models.Student
+@{
+    ViewData["Title"] = "Home Page";
+}
+@* <div id="main" class="main"> *@
+    @* <div class="card"> *@
+    @*     <div class="card-body"> *@
+    @*         <h5 class="card-title">Add New Student</h5> *@
+            <!-- Multi Columns Form -->
+            @* <form method="post"  asp-controller="Student"> *@
+                <form method="post"  >
+                @* <form method="post" asp-action="Index" asp-controller="Student"> *@
+                <div class="container">
+                    <div class="row m-2 my-4">
+                        <div class="col"> <label class="form-label" asp-for="StudentName">Enter Student Name:<span class="text-danger">*</span></label><br/>
+                            <input class="form-control" type="text" placeholder="Student Name" asp-for="StudentName"/>
+                            <span asp-validation-for="StudentName" class="text-danger"></span>
+                        </div>
+                        <div class="col">
+                            <label class="form-label" asp-for="Password">Enter Password:</label><br/>
+                            <input class="form-control" type="text" placeholder=" Password" asp-for="Password"/>
+                        </div>
+                        <div class="col">
+                            <label class="form-label" asp-for="ContactNo">Enter Contact Number:</label><br/>
+                            <input class="form-control" type="text" placeholder="Contact Number" asp-for="ContactNo"/>
+                        </div>
+                    </div>
+                    <div class="row m-2 my-4">
+                        <div class="col">
+                            <label class="form-label" asp-for="EnrollmentNo">Enter Enrollment Number:</label><br/>
+                            <input class="form-control" type="text" placeholder="Enrollment Number" asp-for="EnrollmentNo"/>
+                        </div>
+                        <div class="col">
+                            <label class="form-label" asp-for="RollNo">Enter Roll Number:</label><br/>
+                            <input class="form-control" type="text" placeholder="Roll Number" asp-for="RollNo"/>
+                        </div>
+                        <div class="col">
+                            <label class="form-label" asp-for="CurrentSemester">Enter Current Semester:<span class="text-danger">*</span></label><br/>
+                            <input class="form-control" type="text" placeholder="Current Semester" asp-for="CurrentSemester"/>
+                        </div>
+                        <div class="col">
+                            <label class="form-label" asp-for="Remarks">Enter Remarks:</label><br/>
+                            <input class="form-control" type="text" placeholder="Remarks" asp-for="Remarks"/>
+                        </div>
+                    </div>
+                    <div class="row m-2 my-4">
+                        <div class="col">
+                            <label class="form-label" asp-for="EmailInstitute">Enter Institute EmailID:<span class="text-danger">*</span></label><br/>
+                            <input class="form-control" type="text" placeholder="Institute EmailID" asp-for="EmailInstitute"/>
+                        </div>
+                        <div class="col">
+                            <label class="form-label" asp-for="EmailPersonal">Enter Personal EmailID:</label><br/>
+                            <input class="form-control" type="text" placeholder="Personal EmailID" asp-for="EmailPersonal"/>
+                        </div>
+                    </div>
+                    <div class="row m-2 my-4">
+                        <div class="col">
+                            <label class="form-label" asp-for="CastID">Enter Cast ID:<span class="text-danger">*</span></label><br/>
+                            <input class="form-control" type="text" placeholder="Cast ID" asp-for="CastID"/>
+                        </div>
+                        <div class="col">
+                            <label class="form-label" asp-for="CityID">Enter City ID:<span class="text-danger">*</span></label><br/>
+                            <input class="form-control" type="text" placeholder="City ID" asp-for="CityID"/>
+                        </div>
+                    </div>
+                    <div class="row m-2 my-4">
+                        <button type="submit" class="btn btn-primary col-2">Submit</button>
+                        @* <input type="submit" class="btn btn-primary col-2" value="Submit"> *@
+                    </div>
+                </div>
+            </form>
+    @*     </div> *@
+    @* </div> *@
+
+@* </div> *@
+@section Scripts{
+@{
+await Html.RenderPartialAsync("_ValidationScriptsPartial");
+}
+}
+

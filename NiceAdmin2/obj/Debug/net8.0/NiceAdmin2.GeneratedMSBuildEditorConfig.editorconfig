@@ -1,0 +1,147 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = NiceAdmin2
+build_property.RootNamespace = NiceAdmin2
+build_property.ProjectDir = /home/harsh/1-My-Files/codes/dot net/All Programs/NiceAdmin2/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /home/harsh/1-My-Files/codes/dot net/All Programs/NiceAdmin2
+build_property._RazorSourceGeneratorDebug = 
+
+[/home/harsh/1-My-Files/codes/dot net/All Programs/NiceAdmin2/Areas/Employee/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRW1wbG95ZWUvVmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/harsh/1-My-Files/codes/dot net/All Programs/NiceAdmin2/Views/Bills/AddEditBills.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQmlsbHMvQWRkRWRpdEJpbGxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/harsh/1-My-Files/codes/dot net/All Programs/NiceAdmin2/Views/Bills/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQmlsbHMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/harsh/1-My-Files/codes/dot net/All Programs/NiceAdmin2/Views/Customer/AddEditCustomer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXIvQWRkRWRpdEN1c3RvbWVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/harsh/1-My-Files/codes/dot net/All Programs/NiceAdmin2/Views/Customer/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXIvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/harsh/1-My-Files/codes/dot net/All Programs/NiceAdmin2/Views/Home/AddEditDepartment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9BZGRFZGl0RGVwYXJ0bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/harsh/1-My-Files/codes/dot net/All Programs/NiceAdmin2/Views/Home/AddEditEmployee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9BZGRFZGl0RW1wbG95ZWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/harsh/1-My-Files/codes/dot net/All Programs/NiceAdmin2/Views/Home/AddEditEmployeeProject.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9BZGRFZGl0RW1wbG95ZWVQcm9qZWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/harsh/1-My-Files/codes/dot net/All Programs/NiceAdmin2/Views/Home/AddEditProject.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9BZGRFZGl0UHJvamVjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/harsh/1-My-Files/codes/dot net/All Programs/NiceAdmin2/Views/Home/Department.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9EZXBhcnRtZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/harsh/1-My-Files/codes/dot net/All Programs/NiceAdmin2/Views/Home/Employee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9FbXBsb3llZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/harsh/1-My-Files/codes/dot net/All Programs/NiceAdmin2/Views/Home/EmployeeProject.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9FbXBsb3llZVByb2plY3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/harsh/1-My-Files/codes/dot net/All Programs/NiceAdmin2/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/harsh/1-My-Files/codes/dot net/All Programs/NiceAdmin2/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/harsh/1-My-Files/codes/dot net/All Programs/NiceAdmin2/Views/Home/Project.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcm9qZWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/harsh/1-My-Files/codes/dot net/All Programs/NiceAdmin2/Views/Order/AddEditOrder.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT3JkZXIvQWRkRWRpdE9yZGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/harsh/1-My-Files/codes/dot net/All Programs/NiceAdmin2/Views/Order/Order.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT3JkZXIvT3JkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/harsh/1-My-Files/codes/dot net/All Programs/NiceAdmin2/Views/OrderDetails/AddEditOrderDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT3JkZXJEZXRhaWxzL0FkZEVkaXRPcmRlckRldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/harsh/1-My-Files/codes/dot net/All Programs/NiceAdmin2/Views/OrderDetails/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT3JkZXJEZXRhaWxzL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/harsh/1-My-Files/codes/dot net/All Programs/NiceAdmin2/Views/Product/AddEditProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9BZGRFZGl0UHJvZHVjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/harsh/1-My-Files/codes/dot net/All Programs/NiceAdmin2/Views/Product/Product.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9Qcm9kdWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/harsh/1-My-Files/codes/dot net/All Programs/NiceAdmin2/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/harsh/1-My-Files/codes/dot net/All Programs/NiceAdmin2/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/harsh/1-My-Files/codes/dot net/All Programs/NiceAdmin2/Views/Student/AddEditStudent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3R1ZGVudC9BZGRFZGl0U3R1ZGVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/harsh/1-My-Files/codes/dot net/All Programs/NiceAdmin2/Views/Student/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3R1ZGVudC9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/harsh/1-My-Files/codes/dot net/All Programs/NiceAdmin2/Views/User/AddEditUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9BZGRFZGl0VXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/harsh/1-My-Files/codes/dot net/All Programs/NiceAdmin2/Views/User/User.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9Vc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/harsh/1-My-Files/codes/dot net/All Programs/NiceAdmin2/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/harsh/1-My-Files/codes/dot net/All Programs/NiceAdmin2/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/harsh/1-My-Files/codes/dot net/All Programs/NiceAdmin2/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-iyyp2uh8ad

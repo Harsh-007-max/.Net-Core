@@ -29,3 +29,4 @@
 /home/harsh/1-My-Files/codes/dot net/All Programs/NiceAdmin/obj/Debug/net8.0/NiceAdmin.pdb
 /home/harsh/1-My-Files/codes/dot net/All Programs/NiceAdmin/obj/Debug/net8.0/NiceAdmin.genruntimeconfig.cache
 /home/harsh/1-My-Files/codes/dot net/All Programs/NiceAdmin/obj/Debug/net8.0/ref/NiceAdmin.dll
+/home/harsh/1-My-Files/codes/dot net/All Programs/NiceAdmin/obj/Debug/net8.0/scopedcss/Views/Shared/_LoginLayout.cshtml.rz.scp.css

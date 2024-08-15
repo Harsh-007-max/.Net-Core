@@ -42,7 +42,7 @@
 <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-        <a href="index.html" class="logo d-flex align-items-center">
+        <a asp-controller="Home" asp-action="index" class="logo d-flex align-items-center">
             <img src="~/img/logo.png" alt="">
             <span class="d-none d-lg-block">NiceAdmin</span>
         </a>
@@ -223,7 +223,7 @@
                     </li>
 
                     <li>
-                        <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                        <a class="dropdown-item d-flex align-items-center" asp-controller="Home" asp-action="userProfile">
                             <i class="bi bi-person"></i>
                             <span>My Profile</span>
                         </a>
@@ -233,7 +233,7 @@
                     </li>
 
                     <li>
-                        <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                        <a class="dropdown-item d-flex align-items-center" asp-controller="Home" asp-action="userProfile">
                             <i class="bi bi-gear"></i>
                             <span>Account Settings</span>
                         </a>
@@ -243,7 +243,7 @@
                     </li>
 
                     <li>
-                        <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+                        <a class="dropdown-item d-flex align-items-center" >
                             <i class="bi bi-question-circle"></i>
                             <span>Need Help?</span>
                         </a>
@@ -272,7 +272,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
         <li class="nav-item">
-            <a class="nav-link " href="index.html">
+            <a class="nav-link " asp-controller="Home" asp-action="index">
                 <i class="bi bi-grid"></i>
                 <span>Dashboard</span>
             </a>
@@ -284,72 +284,72 @@
             </a>
             <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
-                    <a href="components-alerts.html">
+                    <a asp-controller="Components" asp-action="Index">
                         <i class="bi bi-circle"></i><span>Alerts</span>
                     </a>
                 </li>
                 <li>
-                    <a href="components-accordion.html">
+                    <a asp-controller="Components" asp-action="componentsAccordian">
                         <i class="bi bi-circle"></i><span>Accordion</span>
                     </a>
                 </li>
                 <li>
-                    <a href="components-badges.html">
+                    <a asp-controller="Components" asp-action="componentsBadges">
                         <i class="bi bi-circle"></i><span>Badges</span>
                     </a>
                 </li>
                 <li>
-                    <a href="components-breadcrumbs.html">
+                    <a asp-controller="Components" asp-action="componentsBreadcrumbs">
                         <i class="bi bi-circle"></i><span>Breadcrumbs</span>
                     </a>
                 </li>
                 <li>
-                    <a href="components-buttons.html">
+                    <a asp-controller="Components" asp-action="componentsButton">
                         <i class="bi bi-circle"></i><span>Buttons</span>
                     </a>
                 </li>
                 <li>
-                    <a href="components-cards.html">
+                    <a asp-controller="Components" asp-action="componentsCards">
                         <i class="bi bi-circle"></i><span>Cards</span>
                     </a>
                 </li>
                 <li>
-                    <a href="components-carousel.html">
+                    <a asp-controller="Components" asp-action="componentsCarousel">
                         <i class="bi bi-circle"></i><span>Carousel</span>
                     </a>
                 </li>
                 <li>
-                    <a href="components-list-group.html">
+                    <a asp-controller="Components" asp-action="componentsListGroup">
                         <i class="bi bi-circle"></i><span>List group</span>
                     </a>
                 </li>
                 <li>
-                    <a href="components-modal.html">
+                    <a asp-controller="Components" asp-action="componentsModel">
                         <i class="bi bi-circle"></i><span>Modal</span>
                     </a>
                 </li>
                 <li>
-                    <a href="components-tabs.html">
+                    <a asp-controller="Components" asp-action="componentsTabs">
                         <i class="bi bi-circle"></i><span>Tabs</span>
                     </a>
                 </li>
                 <li>
-                    <a href="components-pagination.html">
+                    <a asp-controller="Components" asp-action="componentsPagination">
                         <i class="bi bi-circle"></i><span>Pagination</span>
                     </a>
                 </li>
                 <li>
-                    <a href="components-progress.html">
+                    <a asp-controller="Components" asp-action="componentsProgress">
                         <i class="bi bi-circle"></i><span>Progress</span>
                     </a>
                 </li>
                 <li>
-                    <a href="components-spinners.html">
+                    <a asp-controller="Components" asp-action="componentsSpinners">
                         <i class="bi bi-circle"></i><span>Spinners</span>
                     </a>
                 </li>
                 <li>
-                    <a href="components-tooltips.html">
+                    <a asp-controller="Components" asp-action="componentsTooltips">
                         <i class="bi bi-circle"></i><span>Tooltips</span>
                     </a>
                 </li>
@@ -362,22 +362,22 @@
             </a>
             <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
-                    <a href="forms-elements.html">
+                    <a asp-controller="Forms" asp-action="Index">
                         <i class="bi bi-circle"></i><span>Form Elements</span>
                     </a>
                 </li>
                 <li>
-                    <a href="forms-layouts.html">
+                    <a asp-controller="Forms" asp-action="FormsLayouts">
                         <i class="bi bi-circle"></i><span>Form Layouts</span>
                     </a>
                 </li>
                 <li>
-                    <a href="forms-editors.html">
+                    <a asp-controller="Forms" asp-action="FormsEditors">
                         <i class="bi bi-circle"></i><span>Form Editors</span>
                     </a>
                 </li>
                 <li>
-                    <a href="forms-validation.html">
+                    <a asp-controller="Forms" asp-action="FormsValidation">
                         <i class="bi bi-circle"></i><span>Form Validation</span>
                     </a>
                 </li>
@@ -390,12 +390,12 @@
             </a>
             <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
-                    <a href="tables-general.html">
+                    <a asp-controller="Tables" asp-action="Index">
                         <i class="bi bi-circle"></i><span>General Tables</span>
                     </a>
                 </li>
                 <li>
-                    <a href="tables-data.html">
+                    <a asp-controller="Tables" asp-action="TablesData">
                         <i class="bi bi-circle"></i><span>Data Tables</span>
                     </a>
                 </li>
@@ -408,17 +408,17 @@
             </a>
             <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
-                    <a href="charts-chartjs.html">
+                    <a asp-controller="Charts" asp-action="Index">
                         <i class="bi bi-circle"></i><span>Chart.js</span>
                     </a>
                 </li>
                 <li>
-                    <a href="charts-apexcharts.html">
+                    <a asp-controller="Charts" asp-action="ApexCharts">
                         <i class="bi bi-circle"></i><span>ApexCharts</span>
                     </a>
                 </li>
                 <li>
-                    <a href="charts-echarts.html">
+                    <a asp-controller="Charts" asp-action="chartsEcharts">
                         <i class="bi bi-circle"></i><span>ECharts</span>
                     </a>
                 </li>
@@ -431,17 +431,17 @@
             </a>
             <ul id="icons-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
-                    <a href="icons-bootstrap.html">
+                    <a asp-controller="Icons" asp-action="Index">
                         <i class="bi bi-circle"></i><span>Bootstrap Icons</span>
                     </a>
                 </li>
                 <li>
-                    <a href="icons-remix.html">
+                    <a asp-controller="Icons" asp-action="IconsRemix">
                         <i class="bi bi-circle"></i><span>Remix Icons</span>
                     </a>
                 </li>
                 <li>
-                    <a href="icons-boxicons.html">
+                    <a asp-controller="Icons" asp-action="IconsBoxicons">
                         <i class="bi bi-circle"></i><span>Boxicons</span>
                     </a>
                 </li>
@@ -451,49 +451,49 @@
         <li class="nav-heading">Pages</li>
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="users-profile.html">
+            <a class="nav-link collapsed" asp-controller="Home" asp-action="userProfile">
                 <i class="bi bi-person"></i>
                 <span>Profile</span>
             </a>
         </li><!-- End Profile Page Nav -->
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="pages-faq.html">
+            <a class="nav-link collapsed" asp-controller="Home" asp-action="pagesFaq">
                 <i class="bi bi-question-circle"></i>
                 <span>F.A.Q</span>
             </a>
         </li><!-- End F.A.Q Page Nav -->
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="pages-contact.html">
+            <a class="nav-link collapsed" asp-controller="Home" asp-action="pagesContact">
                 <i class="bi bi-envelope"></i>
                 <span>Contact</span>
             </a>
         </li><!-- End Contact Page Nav -->
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="pages-register.html">
+            <a class="nav-link collapsed" asp-controller="Auth" asp-action="Register">
                 <i class="bi bi-card-list"></i>
                 <span>Register</span>
             </a>
         </li><!-- End Register Page Nav -->
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="pages-login.html">
+            <a class="nav-link collapsed" asp-controller="Auth" asp-action="Index">
                 <i class="bi bi-box-arrow-in-right"></i>
                 <span>Login</span>
             </a>
         </li><!-- End Login Page Nav -->
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="pages-error-404.html">
+            <a class="nav-link collapsed" asp-controller="Home" asp-action="error404">
                 <i class="bi bi-dash-circle"></i>
                 <span>Error 404</span>
             </a>
         </li><!-- End Error 404 Page Nav -->
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="pages-blank.html">
+            <a class="nav-link collapsed" asp-controller="Home" asp-action="pagesBlank">
                 <i class="bi bi-file-earmark"></i>
                 <span>Blank</span>
             </a>

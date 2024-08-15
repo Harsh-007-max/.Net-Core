@@ -1,0 +1,62 @@
+@model NiceAdmin2.Models.OrderModel;
+
+@{
+    Layout = "_Layout";
+}
+<div id="main">
+    <div class="card">
+        <div class="card-body p-3">
+            <h5>Add New Order</h5>
+            <form method="post" asp-action="Save" asp-controller="Order">
+                @Html.HiddenFor(x=>x.OrderID)
+                <div class="container">
+                    <div class="row m-2 my-4">
+                        <div class="col">
+                            <label class="form-label" asp-for="UserID">Select User:<span class="text-danger">*</span></label><br/>
+                            <select class="form-control" asp-for="UserID" asp-items="@(new SelectList(ViewBag.UserList, "UserID", "UserName"))">
+                                <option value="">Select User</option>
+                            </select>
+                            <span asp-validation-for="UserID" class="text-danger"></span>
+                        </div>
+                        <div class="col">
+                            <label class="form-label" asp-for="CustomerID">Select Customer:<span class="text-danger">*</span></label><br/>
+                            <select class="form-control" asp-for="CustomerID" asp-items="@(new SelectList(ViewBag.CustomerList, "CustomerID", "CustomerName"))">
+                                <option value="">Select User</option>
+                            </select>
+                            <span asp-validation-for="CustomerID" class="text-danger"></span>
+                        </div>
+                        <div class="col">
+                            <label class="form-label" asp-for="OrderDate">Enter Order Date:<span class="text-danger">*</span></label><br/>
+                            <input class="form-control" type="date" asp-for="OrderDate"/>
+                            <span asp-validation-for="OrderDate" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row m-2 my-4">
+                        <div class="col">
+                            <label class="form-label" asp-for="ShippingAddress">Enter Shipping Address:<span class="text-danger">*</span></label><br/>
+                            <input class="form-control" type="text" placeholder="Shipping Address" asp-for="ShippingAddress"/>
+                            <span asp-validation-for="ShippingAddress" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row m-2 my-4">
+                        <div class="col">
+                            <label class="form-label" asp-for="PaymentMode">Enter Payment Mode:</label><br/>
+                            <input class="form-control" type="text" placeholder="Payment Mode" asp-for="PaymentMode"/>
+                            <span asp-validation-for="PaymentMode" class="text-danger"></span>
+                        </div>
+                        <div class="col">
+                            <label class="form-label" asp-for="TotalAmount">Enter Total Amount:</label><br/>
+                            <input class="form-control" type="text" placeholder="Total Amount" asp-for="TotalAmount"/>
+                            <span asp-validation-for="TotalAmount" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row m-2">
+                        <div class="col-2 m-3">
+                            <input type="submit" class="btn btn-primary" placeholder="Submit"/>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
