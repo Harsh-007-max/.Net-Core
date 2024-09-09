@@ -1,0 +1,70 @@
+@model CRUD.Models.CustomerModel;
+@{
+    Layout = "_Layout";
+}
+
+
+<div id="main">
+    <div class="card">
+        <div class="card-body p-3">
+            <h5>Add New Customer</h5>
+            <form method="post" asp-action="CustomerSave" asp-controller="Customer">
+                @Html.HiddenFor(x=>x.CustomerId)
+                <div class="container">
+                    <div class="row m-2 my-4">
+                        <div class="col">
+                            @Html.LabelFor(m=>m.UserID,"Enter User ID:",new{@class="form-label"})
+                            @Html.TextBoxFor(m => m.UserID, new { @class="form-control",@placeholder = "User ID" })
+                        </div>
+                    </div>
+                    <div class="row m-2 my-4">
+                        <div class="col-4">
+                            @Html.LabelFor(m=>m.CustomerName,"Enter Customer Name:",new{@class="form-label"})
+                            @Html.TextBoxFor(m=>m.CustomerName,new {@class="form-control",@placeholder="Customer Name"})
+                        </div>
+                        <div class="col">
+                            @Html.LabelFor(m=>m.CustomerName,"Enter Home Address:",new{@class="form-label"})
+                            @Html.TextBoxFor(m=>m.HomeAddress,new {@class="form-control",@placeholder="Home Address"})
+                        </div>
+                    </div>
+                    <div class="row m-2 my-4">
+                        <div class="col">
+                            @Html.LabelFor(m=>m.MobileNo,"Enter Mobile Number:",new{@class="form-label"})
+                            @Html.TextBoxFor(m => m.MobileNo, new { @class="form-control",@placeholder = "Mobile Number" })
+                        </div>
+                        <div class="col">
+                            @Html.LabelFor(m=>m.Email,"Enter Email:")
+                            @Html.TextBoxFor(m=>m.Email,new { @class="form-control",@placeholder="Email"})
+                        </div>
+                    </div>
+                    <div class="row m-2 my-4">
+                        <div class="col">
+                            @Html.LabelFor(m=>m.CityName,"Enter City Name:")
+                            @Html.TextBoxFor(m=>m.CityName,new { @class="form-control",@placeholder="City Name"})
+                        </div>
+                        <div class="col">
+                            @Html.LabelFor(m=>m.PinCode,"Enter Pin Code:")
+                            @Html.TextBoxFor(m=>m.PinCode,new { @class="form-control",@placeholder="Pin Code"})
+                        </div>
+                    </div>
+                    <div class="row m-2 my-4">
+                        <div class="col">
+                            @Html.LabelFor(m=>m.NetAmount,"Enter Net Amount:")
+                            @Html.TextBoxFor(m=>m.NetAmount,new { @class="form-control",@placeholder="Net Amount"})
+                        </div>
+                        <div class="col">
+                            @Html.LabelFor(m=>m.GSTNO,"Enter GST Number:")
+                            @Html.TextBoxFor(m=>m.GSTNO,new { @class="form-control",@placeholder="GST Number"})
+                        </div>
+                    </div>
+                    <div class="row m-2">
+                        <div class="col-2 m-3">
+                            <input type="submit" class="btn btn-primary" placeholder="Submit"/>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

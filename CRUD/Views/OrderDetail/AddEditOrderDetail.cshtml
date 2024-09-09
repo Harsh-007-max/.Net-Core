@@ -1,0 +1,52 @@
+@model CRUD.Models.OrderDetailModel;
+@{
+    Layout = "_Layout";
+}
+
+<div id="main">
+    <div class="card">
+        <div class="card-body p-3">
+            <h5>Add New Order Details Entry</h5>
+            <form method="post" asp-action="OrderDetailSave" asp-controller="OrderDetail">
+                @Html.HiddenFor(x=>x.OrderDetailID)
+                <div class="container">
+                    <div class="row m-2 my-4">
+                        <div class="col">
+                            @Html.LabelFor(m=>m.UserID,"Select User:",new {@class="form-label"})
+                            @Html.DropDownListFor(m => m.UserID, new SelectList(ViewBag.UserList, "UserID", "UserName"), "Select User",new {@class="form-control"})
+                        </div>
+                        <div class="col">
+                            @Html.LabelFor(m=>m.OrderID,"Select Order:",new {@class="form-label"})
+                            @Html.DropDownListFor(m => m.OrderID, new SelectList(ViewBag.OrderList, "OrderID", "OrderID"), "Select Order",new {@class="form-control"})
+                        </div>
+                        <div class="col">
+                            @Html.LabelFor(m=>m.ProductID,"Select Product:",new {@class="form-label"})
+                            @Html.DropDownListFor(m => m.ProductID, new SelectList(ViewBag.ProductList, "ProductID", "ProductName"), "Select Product",new {@class="form-control"})
+                        </div>
+                    </div>
+                    <div class="row m-2 my-4">
+                        <div class="col">
+                            @Html.LabelFor(m=>m.Quantity,"Enter Quantity:",new {@class="form-label"})
+                            @Html.TextBoxFor(m=>m.Quantity,new {@class="form-control",@placeholder="Quantity"})
+                        </div>
+                        <div class="col">
+                            @Html.LabelFor(m=>m.Amount,"Enter Amount:",new {@class="form-label"})
+                            @Html.TextBoxFor(m=>m.Amount,new {@class="form-control",@placeholder="Amount"})
+                        </div>
+                    </div>
+                    <div class="row m-2 my-4">
+                        <div class="col">
+                            @Html.LabelFor(m=>m.TotalAmount,"Enter Total Amount:",new {@class="form-label"})
+                            @Html.TextBoxFor(m=>m.TotalAmount,new {@class="form-control",@placeholder="Total Amount"})
+                        </div>
+                    </div>
+                    <div class="row m-2">
+                        <div class="col-2 m-3">
+                            <input type="submit" class="btn btn-primary" placeholder="Submit"/>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

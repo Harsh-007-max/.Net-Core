@@ -1,0 +1,65 @@
+@using System.Data;
+@model System.Data.DataTable;
+@{
+    Layout = "_Layout";
+}
+<main id="main" class="main">
+    <div class="row">
+        <div class="col-lg-12">
+
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <h5 class="col-3 card-title">Customer Table</h5>
+                        <h5 class="col"></h5>
+                        <h5 class="col-1 my-2 ml-2">
+                            <a class="btn btn-primary" asp-controller="Customer" asp-action="AddEditCustomer">Add+</a>
+                        </h5>
+                    </div>
+                    <!-- Default Table -->
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th class="col">Customer ID</th>
+                            <th class="col">Customer Name</th>
+                            <th class="col">Home Address</th>
+                            <th class="col">Email</th>
+                            <th class="col">Mobile No</th>
+                            <th class="col">GST No</th>
+                            <th class="col">City Name</th>
+                            <th class="col">PinCode</th>
+                            <th class="col">Net Amount</th>
+                            <th class="col">User ID</th>
+                            <th class="col">Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        @foreach (DataRow customer in Model.Rows)
+                        {
+                        <tr>
+                            <td class="col">@customer["CustomerID"]</td>
+                            <td class="col">@customer["CustomerName"]</td>
+                            <td class="col">@customer["HomeAddress"]</td>
+                            <td class="col">@customer["Email"]</td>
+                            <td class="col">@customer["MobileNo"]</td>
+                            <td class="col">@customer["GST_No"]</td>
+                            <td class="col">@customer["CityName"]</td>
+                            <td class="col">@customer["PinCode"]</td>
+                            <td class="col">@customer["NetAmount"]</td>
+                            <td class="col">@customer["UserID"]</td>
+                            <td>
+                                <button class="btn btn-primary">Edit</button>
+                                <form asp-controller="Customer" asp-action="DeleteCustomer">
+                                    <input type="hidden" name="CustomerID" value="@customer["CustomerID"]" />
+                                    <button class="btn btn-danger" type="submit">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                        }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
