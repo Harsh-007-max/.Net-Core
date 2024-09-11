@@ -62,7 +62,7 @@ public class CustomerController : Controller
             }
             return RedirectToAction("Index");
         }
-        return View("AddEditCustomer", customer);
+        return RedirectToAction("AddEditCustomer", customer);
     }
 
     public IActionResult DeleteCustomer(int customerId)

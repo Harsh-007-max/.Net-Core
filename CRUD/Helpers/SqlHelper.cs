@@ -52,7 +52,6 @@ public class SqlHelper
         }else if(update)
         {
             command = fillSqlCommandProperty(obj, command);
-            Console.WriteLine(obj);
             command.ExecuteNonQuery();
         }else if (delete)
         {

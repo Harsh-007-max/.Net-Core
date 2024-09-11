@@ -39,7 +39,6 @@ public class ProductController : Controller
 
     public IActionResult ProductSave(ProductModel product)
     {
-      Console.WriteLine(product.UserID+" "+product.ProductName+" "+product.ProductCode+" "+product.Description+" "+product.ProductID+" "+ModelState.IsValid);
         if (ModelState.IsValid)
         {
             if (product.ProductID > 0)
@@ -66,15 +65,10 @@ public class ProductController : Controller
 
     public IActionResult DeleteProduct(int productID)
     {
-        // Dictionary<string,object> data = new Dictionary<string, object>
-        // {
-        //     {"@PID",}
-        // };
         var deleteObj = new
         {
             productID
         };
-        // _sqlHelper.ExecuteStoredProcedure("PR_Procedure_DeleteByPK",data);
         _sqlHelper.PerformSqlOperation(deleteObj, "PR_Procedure_DeleteByPK", delete: true);
         return RedirectToAction("Index");
     }

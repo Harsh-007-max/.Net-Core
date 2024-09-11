@@ -45,7 +45,7 @@ public class BillController : Controller
     {
         if (ModelState.IsValid)
         {
-            if (bill.BillId >0)
+            if (bill.BillId > 0)
             {
                 _sqlHelper.PerformSqlOperation(bill,"PR_Bills_UpdateByPK",update:true);
             }

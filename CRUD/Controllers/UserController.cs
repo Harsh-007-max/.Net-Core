@@ -51,7 +51,7 @@ public class UserController : Controller
                     user.Address,
                     user.IsActive,
                 };
-                _sqlHelper.PerformSqlOperation(insertUser,"PR_User_Insert",insert:true);
+                _sqlHelper.PerformSqlOperation(insertUser, "PR_User_Insert", insert: true);
             }
             return RedirectToAction("Index");
         }
