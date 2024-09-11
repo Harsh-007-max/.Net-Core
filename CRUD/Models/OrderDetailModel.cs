@@ -5,7 +5,7 @@ public class OrderDetailModel
 {
     [Required]
     [Display(Name = "Order Detail ID")]
-    [Range(1, int.MaxValue)]
+    [Range(0, int.MaxValue)]
     public int OrderDetailID { get; set; }
     
     [Required]

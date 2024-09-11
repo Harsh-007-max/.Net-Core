@@ -40,7 +40,7 @@
                             <td>@product["Description"]</td>
                             <td>@product["UserID"]</td>
                             <td>
-                                <button class="btn btn-primary">Edit</button>
+                  <a class="btn btn-primary" asp-controller="Product" asp-action="AddEditProduct" asp-route-ProductID="@product["ProductID"]">Edit</a>
                                 <form asp-controller="Product" asp-action="DeleteProduct">
                                     <input type="hidden" name="ProductID" value="@product["ProductID"]" />
                                     <button class="btn btn-danger" type="submit">Delete</button>

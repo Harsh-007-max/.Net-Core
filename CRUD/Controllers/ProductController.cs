@@ -9,51 +9,73 @@ public class ProductController : Controller
 {
     private IConfiguration _configuration;
     private SqlHelper _sqlHelper;
+    private FillDropdown _fillDropdown;
     public ProductController(IConfiguration configuration)
     {
         _configuration = configuration;
         string connectionString = this._configuration.GetConnectionString("ConnectionString")!;
         _sqlHelper = new SqlHelper(connectionString);
+        _fillDropdown = new FillDropdown();
     }
     // GET
     public IActionResult Index()
     {
-        DataTable allProducts = _sqlHelper.ExecuteStoredProcedure("PR_Product_SelectAll");
+        DataTable allProducts = _sqlHelper.ExecuteStoredProcedure("PR_Product_SelectAll")!;
         return View(allProducts);
     }
 
-    public IActionResult AddEditProduct()
+    public IActionResult AddEditProduct(int? ProductID)
     {
-        DataTable userDropdown = _sqlHelper.ExecuteStoredProcedure("PR_User_DropDown");
-        List<UserDropDownModel> userDropdownList = new List<UserDropDownModel>();
-        foreach (DataRow dataRow in userDropdown.Rows)
-        {
-            UserDropDownModel userDropDownModel= new UserDropDownModel();
-            userDropDownModel.UserID= Convert.ToInt32(dataRow["UserID"]);
-            userDropDownModel.UserName= dataRow["UserName"].ToString()!;
-            userDropdownList.Add(userDropDownModel);
-
-        }
+        DataTable userDropdown = _sqlHelper.ExecuteStoredProcedure("PR_User_DropDown")!;
+        List<UserDropDownModel> userDropdownList = _fillDropdown.FIllDropDown<UserDropDownModel>(userDropdown);
         ViewBag.UserList = userDropdownList;
-        return View();
+        ProductModel product = new ProductModel();
+        if (ProductID != null)
+        {
+            product = _sqlHelper.GetByID<ProductModel>("PR_Product_SelectByPK", "@ProductID", ProductID ?? 1);
+        }
+        return View(product);
     }
 
     public IActionResult ProductSave(ProductModel product)
     {
+      Console.WriteLine(product.UserID+" "+product.ProductName+" "+product.ProductCode+" "+product.Description+" "+product.ProductID+" "+ModelState.IsValid);
         if (ModelState.IsValid)
         {
-            return View("Index");
+            if (product.ProductID > 0)
+            {
+                _sqlHelper.PerformSqlOperation<ProductModel>(product, "PR_Product_UpdateByPK", update: true);
+            }
+            else
+            {
+                var insertProduct = new
+                {
+                    product.ProductName,
+                    product.ProductPrice,
+                    product.ProductCode,
+                    product.Description,
+                    product.UserID,
+
+                };
+                _sqlHelper.PerformSqlOperation(insertProduct, "PR_Product_Insert", insert: true);
+            }
+            return RedirectToAction("Index");
         }
-        return View("AddEditProduct");
+        return RedirectToAction("AddEditProduct", product);
     }
 
     public IActionResult DeleteProduct(int productID)
     {
-        Dictionary<string,object> data = new Dictionary<string, object>
+        // Dictionary<string,object> data = new Dictionary<string, object>
+        // {
+        //     {"@PID",}
+        // };
+        var deleteObj = new
         {
-            {"@PID",productID}
+            productID
         };
-        _sqlHelper.ExecuteStoredProcedure("PR_Procedure_DeleteByPK",data);
+        // _sqlHelper.ExecuteStoredProcedure("PR_Procedure_DeleteByPK",data);
+        _sqlHelper.PerformSqlOperation(deleteObj, "PR_Procedure_DeleteByPK", delete: true);
         return RedirectToAction("Index");
     }
 }

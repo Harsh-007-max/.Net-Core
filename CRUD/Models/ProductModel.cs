@@ -5,7 +5,7 @@ public class ProductModel
 {
     [Required]
     [Display(Name = "Product ID")]
-    [Range(1, int.MaxValue)]
+    [Range(0, int.MaxValue)]
     public int ProductID { get; set; }
     
     [Required]

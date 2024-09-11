@@ -1,5 +1,7 @@
 using System.Data;
 using System.Data.SqlClient;
+using System.Runtime.InteropServices;
+
 namespace CRUD.Helpers;
 
 
@@ -12,31 +14,97 @@ public class SqlHelper
         _connectionString = connectionString;
     }
 
-    public DataTable? ExecuteStoredProcedure(string procedureName, Dictionary<string,object> parameters=null)
+    public SqlConnection GetConnection()
     {
-        SqlConnection connection = new SqlConnection(_connectionString);
-        SqlCommand command=command = new SqlCommand(procedureName, connection);
-        if (parameters != null)
+        return new SqlConnection(_connectionString);
+    }
+
+    public SqlCommand GetCommand(SqlConnection connection)
+    {
+        SqlCommand command = connection.CreateCommand();
+        command.CommandType = CommandType.StoredProcedure;
+        return command;
+    }
+
+    public SqlCommand fillSqlCommandProperty<T>(T obj, SqlCommand command)
+    {
+        foreach (var prop in typeof(T).GetProperties())
         {
-            foreach (KeyValuePair<string, object> parameter in parameters)
+            var propertyValue = prop.GetValue(obj, null);
+            if (propertyValue != null)
             {
-                command.Parameters.Add(parameter.Key,SqlDbType.Int).Value = parameter.Value;
+                string propName = "@" + prop.Name;
+                command.Parameters.AddWithValue(propName, propertyValue);
             }
         }
-        command.CommandType = CommandType.StoredProcedure;
+        return command;
+    }
+    public T PerformSqlOperation<T>(T obj,string procedureName,bool insert=false,Boolean update=false,Boolean delete=false,int id=0)
+    {
+        SqlConnection connection = GetConnection();
         connection.Open();
-        if (parameters == null)
+        SqlCommand command = GetCommand(connection);
+        command.CommandText = procedureName;
+        if (insert)
         {
-            SqlDataReader reader = command.ExecuteReader();
-            DataTable dataTable = new DataTable();
-            dataTable.Load(reader);
-            connection.Close();
-            return dataTable;
+            command = fillSqlCommandProperty(obj, command);
+            command.ExecuteNonQuery();
+        }else if(update)
+        {
+            command = fillSqlCommandProperty(obj, command);
+            Console.WriteLine(obj);
+            command.ExecuteNonQuery();
+        }else if (delete)
+        {
+            command = fillSqlCommandProperty(obj, command);
+            command.ExecuteNonQuery();
+        }else if (id != 0)
+        {
+            // return GetByID<T>(command);
         }
         else
         {
-            command.ExecuteNonQuery();
-            return null;
+            ExecuteStoredProcedure(procedureName);
         }
+        connection.Close();
+        return default(T);
+    }
+
+    public T GetByID<T>(string procedureName,string propName,int id) where T : new()
+    {
+        SqlConnection connection = GetConnection();
+        connection.Open();
+        SqlCommand command = GetCommand(connection);
+        command.CommandText = procedureName;
+        command.Parameters.AddWithValue(propName,id);
+        T item = new T();
+        SqlDataReader reader = command.ExecuteReader();
+        if (reader.HasRows)
+        {
+            DataTable dt = new DataTable();
+            dt.Load(reader);
+            DataRow dr = dt.Rows[0];
+            foreach (var prop in typeof(T).GetProperties())
+            {
+                if (dt.Columns.Contains(prop.Name) && dr[prop.Name] != DBNull.Value)
+                {
+                    var targetType= Nullable.GetUnderlyingType(prop.PropertyType) ?? prop.PropertyType;
+                    prop.SetValue(item,Convert.ChangeType(dr[prop.Name],targetType));
+                }
+            }
+        }
+        return item;
+    }
+    public DataTable? ExecuteStoredProcedure(string procedureName)
+    {
+        SqlConnection connection = new SqlConnection(_connectionString);
+        SqlCommand command=command = new SqlCommand(procedureName, connection);
+        command.CommandType = CommandType.StoredProcedure;
+        connection.Open();
+        SqlDataReader reader = command.ExecuteReader();
+        DataTable dataTable = new DataTable();
+        dataTable.Load(reader);
+        connection.Close();
+        return dataTable;
     }
 }

@@ -5,7 +5,8 @@ public class CustomerModel
 {
     [Required]
     [Display(Name = "Customer ID")]
-    public int CustomerId { get; set; }
+    [Range(0, int.MaxValue)]
+    public int CustomerID { get; set; }
     
     [Required]
     [Display(Name = "Customer Name")]

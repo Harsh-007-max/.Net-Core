@@ -45,7 +45,7 @@
                                 <td>@OrderDetail["TotalAmount"]</td>
                                 <td>@OrderDetail["UserID"]</td>
                                 <td>
-                                    <button class="btn btn-primary">Edit</button>
+                                    <a class="btn btn-primary" asp-route-OrderDetailID="@OrderDetail["OrderDetailID"]" asp-action="AddEditOrderDetail" asp-controller="OrderDetail">Edit</a>
                                     <form asp-controller="OrderDetail" asp-action="DeleteOrderDetail">
                                         <input type="hidden" name="OrderDetailID" value="@OrderDetail["OrderDetailID"]" />
                                         <button class="btn btn-danger" type="submit">Delete</button>

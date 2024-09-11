@@ -1,5 +1,4 @@
 using System.Data;
-using System.Data.SqlClient;
 using CRUD.Helpers;
 using CRUD.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -10,59 +9,32 @@ public class BillController : Controller
 {
     private IConfiguration _configuration;
     private SqlHelper _sqlHelper;
-    
+    private FillDropdown _fillDropdown;
     public BillController(IConfiguration configuration)
     {
         _configuration = configuration;
         string connectionString = this._configuration.GetConnectionString("ConnectionString")!;
         _sqlHelper = new SqlHelper(connectionString);
+        _fillDropdown = new FillDropdown();
     }
     // GET
     public IActionResult Index()
     {
-        DataTable allBills = this._sqlHelper.ExecuteStoredProcedure("PR_Bills_SelectAll");
+        DataTable allBills = this._sqlHelper.ExecuteStoredProcedure("PR_Bills_SelectAll")!;
         return View(allBills);
     }
 
     public IActionResult AddEditBill(int? BillId)
     {
-        DataTable userDropdown = _sqlHelper.ExecuteStoredProcedure("PR_User_DropDown");
-        List<UserDropDownModel> userDropdownList = new List<UserDropDownModel>();
-        foreach (DataRow dataRow in userDropdown.Rows)
-        {
-            UserDropDownModel userDropDownModel= new UserDropDownModel();
-            userDropDownModel.UserID= Convert.ToInt32(dataRow["UserID"]);
-            userDropdownList.Add(userDropDownModel);
-
-        }
-        DataTable orderDropdown= _sqlHelper.ExecuteStoredProcedure("PR_Order_DropDown");
-        List<OrderDropDownModel> orderDropDownList= new List<OrderDropDownModel>();
-        foreach (DataRow dataRow in orderDropdown.Rows)
-        {
-            OrderDropDownModel orderDropDownModel= new OrderDropDownModel();
-            orderDropDownModel.OrderID= Convert.ToInt32(dataRow["OrderID"]);
-            orderDropDownList.Add(orderDropDownModel);
-        }
+        DataTable userDropdown = _sqlHelper.ExecuteStoredProcedure("PR_User_DropDown")!;
+        List<UserDropDownModel> userDropdownList = _fillDropdown.FIllDropDown<UserDropDownModel>(userDropdown);
+        DataTable orderDropdown= _sqlHelper.ExecuteStoredProcedure("PR_Order_DropDown")!;
+        List<OrderDropDownModel> orderDropDownList = _fillDropdown.FIllDropDown<OrderDropDownModel>(orderDropdown);
         string connectionString = this._configuration.GetConnectionString("ConnectionString")!;
-        SqlConnection connection = new SqlConnection(connectionString);
-        connection.Open();
-        SqlCommand command = connection.CreateCommand();
-        command.CommandType = CommandType.StoredProcedure;
-        command.CommandText = "PR_Bills_SelectByPK";
-        command.Parameters.Add("@BID",SqlDbType.Int).Value=BillId;
-        SqlDataReader reader =  command.ExecuteReader();
-        DataTable dataTable = new DataTable();
-        dataTable.Load(reader);
         BillsModel billsModel = new BillsModel();
-        foreach (DataRow dataRow in dataTable.Rows)
+        if (BillId!= null)
         {
-            billsModel.OrderID = Convert.ToInt32(dataRow["OrderID"]);
-            billsModel.UserID = Convert.ToInt32(dataRow["UserID"]);
-            billsModel.BillDate = Convert.ToDateTime(dataRow["BillDate"]);
-            billsModel.BillNumber = dataRow["BillNumber"].ToString();
-            billsModel.Discount = Convert.ToDecimal(dataRow["Discount"]);
-            billsModel.NetAmount = Convert.ToDecimal(dataRow["NetAmount"]);
-            billsModel.TotalAmount = Convert.ToDecimal(dataRow["TotalAmount"]);
+            billsModel = _sqlHelper.GetByID<BillsModel>("PR_Bills_SelectByPK","@BillId",BillId??1);
         }
         ViewBag.UserList = userDropdownList;
         ViewBag.OrderList=orderDropDownList;
@@ -71,31 +43,26 @@ public class BillController : Controller
 
     public IActionResult SaveBill(BillsModel bill)
     {
-        string connectionString = this._configuration.GetConnectionString("ConnectionString")!;
-        SqlConnection connection = new SqlConnection(connectionString);
-        connection.Open();
-        SqlCommand command = connection.CreateCommand();
-        command.CommandType = CommandType.StoredProcedure;
         if (ModelState.IsValid)
         {
             if (bill.BillId >0)
             {
-                command.CommandText = "PR_Bills_UpdateByPK";
-                command.Parameters.AddWithValue("@BID", bill.BillId);
+                _sqlHelper.PerformSqlOperation(bill,"PR_Bills_UpdateByPK",update:true);
             }
             else
             {
-                command.CommandText = "PR_Bills_Insert";
+                var insertBill = new
+                {
+                    bill.BillNumber,
+                    bill.BillDate,
+                    bill.TotalAmount,
+                    bill.NetAmount,
+                    bill.Discount,
+                    bill.OrderID,
+                    bill.UserID
+                };
+                _sqlHelper.PerformSqlOperation(insertBill,"PR_Bills_Insert",insert:true);
             }
-
-            command.Parameters.AddWithValue("@BillNumber", bill.BillNumber);
-            command.Parameters.AddWithValue("@UserID",bill.UserID);
-            command.Parameters.AddWithValue("@NetAmount",bill.NetAmount);
-            command.Parameters.AddWithValue("@Discount",bill.Discount);
-            command.Parameters.AddWithValue("@TotalAmount",bill.TotalAmount);
-            command.Parameters.AddWithValue("@BillDate",bill.BillDate);
-            command.Parameters.AddWithValue("@OrderID",bill.OrderID);
-            command.ExecuteNonQuery();
             return RedirectToAction("Index");
         }
         return RedirectToAction("AddEditBill",bill);
@@ -103,12 +70,11 @@ public class BillController : Controller
 
     public IActionResult DeleteBill(int billId)
     {
-        
-        Dictionary<string,object> data = new Dictionary<string, object>
+        var deleteObj = new
         {
-            {"@BID",billId}
+            billId
         };
-        _sqlHelper.ExecuteStoredProcedure("PR_Bills_DeleteByPK",data);
+        _sqlHelper.PerformSqlOperation(deleteObj,"PR_Bills_DeleteByPK", delete: true);
         return RedirectToAction("Index");
     }
 }

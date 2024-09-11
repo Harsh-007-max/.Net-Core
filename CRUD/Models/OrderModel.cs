@@ -5,7 +5,7 @@ public class OrderModel
 {
     [Required]
     [Display(Name = "Order ID")]
-    [Range(1, int.MaxValue)]
+    [Range(0, int.MaxValue)]
     public int OrderID { get; set; }
     
     [Required]
@@ -18,7 +18,7 @@ public class OrderModel
     public int CustomerID { get; set; }
     
     [Display(Name = "Payment Method")]
-    public String PaymentMode { get; set; }
+    public String? PaymentMode { get; set; }
     
     [Display(Name = "Total Amount")]
     [Range(1, int.MaxValue)]
@@ -26,7 +26,7 @@ public class OrderModel
     
     [Required]
     [Display(Name = "Shipping Address")]
-    public String ShippingAddress { get; set; }
+    public String? ShippingAddress { get; set; }
     
     [Required]
     [Display(Name = "User ID")]

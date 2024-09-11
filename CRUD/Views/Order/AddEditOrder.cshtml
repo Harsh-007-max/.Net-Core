@@ -7,7 +7,7 @@
     <div class="card">
         <div class="card-body p-3">
             <h5>Add New Order</h5>
-            <form method="post" asp-action="Save" asp-controller="Order">
+            <form method="post" asp-action="OrderSave" asp-controller="Order">
                 @Html.HiddenFor(x=>x.OrderID)
                 <div class="container">
                     <div class="row m-2 my-4">
@@ -42,7 +42,7 @@
                     </div>
                     <div class="row m-2">
                         <div class="col-2 m-3">
-                            <input type="submit" class="btn btn-primary" placeholder="Submit"/>
+                            <input type="submit" class="btn btn-primary"  placeholder="Submit"/>
                         </div>
                     </div>
                 </div>

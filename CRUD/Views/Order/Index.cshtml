@@ -40,7 +40,7 @@
                                 <th scope="col">@order["TotalAmount"]</th>
                                 <th scope="col">@order["UserID"]</th>
                                 <td>
-                                    <button class="btn btn-primary">Edit</button>
+                                    <a class="btn btn-primary" asp-route-OrderID="@order["OrderID"]" asp-action="AddEditOrder" asp-controller="Order">Edit</a>
                                     <form asp-controller="Order" asp-action="DeleteOrder">
                                         <input type="hidden" name="OrderID" value="@order["OrderID"]"/>
                                         <button class="btn btn-danger" type="submit">Delete</button>

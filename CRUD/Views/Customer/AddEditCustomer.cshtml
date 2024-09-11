@@ -9,12 +9,12 @@
         <div class="card-body p-3">
             <h5>Add New Customer</h5>
             <form method="post" asp-action="CustomerSave" asp-controller="Customer">
-                @Html.HiddenFor(x=>x.CustomerId)
+                @Html.HiddenFor(x=>x.CustomerID)
                 <div class="container">
                     <div class="row m-2 my-4">
                         <div class="col">
-                            @Html.LabelFor(m=>m.UserID,"Enter User ID:",new{@class="form-label"})
-                            @Html.TextBoxFor(m => m.UserID, new { @class="form-control",@placeholder = "User ID" })
+                            @Html.LabelFor(m=>m.UserID,"Select User:",new {@class="form-label"})
+                            @Html.DropDownListFor(m => m.UserID, new SelectList(ViewBag.UserList, "UserID", "UserName"), "Select User",new {@class="form-control"})
                         </div>
                     </div>
                     <div class="row m-2 my-4">
