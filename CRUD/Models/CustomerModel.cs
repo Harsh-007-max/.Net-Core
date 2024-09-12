@@ -10,34 +10,34 @@ public class CustomerModel
     
     [Required]
     [Display(Name = "Customer Name")]
-    public required string CustomerName { get; set; }
+    public string CustomerName { get; set; }
     
     [Required]
     [Display(Name = "Home Address")]
-    public required string HomeAddress { get; set; }
+    public string HomeAddress { get; set; }
     
     [Required]
     [EmailAddress]
     [Display(Name = "Email Address")]
-    public required string Email { get; set; }
+    public string Email { get; set; }
     
     [Required]
     [MinLength(10)]
     [MaxLength(10)]
     [Display(Name = "Mobile Number")]
-    public required string MobileNo { get; set; }
+    public string MobileNo { get; set; }
     
     [Required]
     [Display(Name = "GST Number")]
-    public required string GSTNO { get; set; }
+    public string GSTNO { get; set; }
     
     [Required]
     [Display(Name = "City Name")]
-    public required string CityName { get; set; }
+    public string CityName { get; set; }
     
     [Required]
     [Display(Name = "Pin Code")]
-    public required string PinCode { get; set; }
+    public string PinCode { get; set; }
     
     [Required]
     [Display(Name = "Net Amount")]
@@ -53,5 +53,5 @@ public class CustomerDropDownModel
     public int CustomerID { get; set; }
     
     [Display(Name = "Customer Name")]
-    public required String CustomerName { get; set; }
+    public String CustomerName { get; set; }
 }

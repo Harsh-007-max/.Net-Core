@@ -9,7 +9,7 @@ public class BillsModel
     
     [Required]
     [Display(Name ="Bill Number")]
-    public required string BillNumber { get; set; } 
+    public string BillNumber { get; set; } 
 
     [Required]
     [Display(Name ="Bill Date")]
