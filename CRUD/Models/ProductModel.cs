@@ -10,7 +10,7 @@ public class ProductModel
     
     [Required]
     [Display(Name = "Product Name")]
-    public String ProductName { get; set; }
+    public String? ProductName { get; set; }
     
     [Required]
     [Display(Name = "Product Price")]
@@ -19,11 +19,11 @@ public class ProductModel
     
     [Required]
     [Display(Name = "Product Code")]
-    public String ProductCode { get; set; }
+    public String? ProductCode { get; set; }
     
     [Required]
     [Display(Name = "Product Description")]
-    public String Description { get; set; }
+    public String? Description { get; set; }
     
     [Required]
     [Display(Name = "User ID")]
@@ -36,5 +36,5 @@ public class ProductDropDownModel
     public int ProductID { get; set; }
     
     [Display(Name = "Product Name")]
-    public String ProductName { get; set; }
+    public String? ProductName { get; set; }
 }

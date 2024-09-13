@@ -10,26 +10,26 @@ public class UserModel
     
     [Required]
     [Display(Name = "User Name")]
-    public String UserName { get; set; }
+    public String? UserName { get; set; }
     
     [Required]
     [Display(Name = "Email")]
     [EmailAddress]
-    public String Email { get; set; }
+    public String? Email { get; set; }
     
     [Required]
     [Display(Name = "Password")]
-    public String Password { get; set; }
+    public String? Password { get; set; }
     
     [Required]
     [Display(Name = "Mobile Number")]
     [MinLength(10)]
     [MaxLength(10)]
-    public String MobileNo { get; set; }
+    public String? MobileNo { get; set; }
     
     [Required]
     [Display(Name = "Address")]
-    public String Address { get; set; }
+    public String? Address { get; set; }
     
     [Required]
     [Display(Name = "Is Active User")]
@@ -42,5 +42,5 @@ public class UserDropDownModel
     public int UserID { get; set; }
     
     [Display(Name = "User Name")]
-    public String UserName { get; set; }
+    public String? UserName { get; set; }
 }

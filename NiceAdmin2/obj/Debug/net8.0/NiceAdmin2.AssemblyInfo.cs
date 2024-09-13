@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NiceAdmin2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b1c5e8aa907751583a79cf38947e12f67426e060")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aa47b89fa835234fbc6af33f6ebc0981b654397b")]
 [assembly: System.Reflection.AssemblyProductAttribute("NiceAdmin2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NiceAdmin2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
