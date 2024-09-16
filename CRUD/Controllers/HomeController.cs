@@ -12,16 +12,12 @@ public class HomeController : Controller
     // {
     //     _logger = logger;
     // }
-
+#region Index
     public IActionResult Index()
     {
         return View();
     }
-
-    public IActionResult Privacy()
-    {
-        return View();
-    }
+#endregion
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

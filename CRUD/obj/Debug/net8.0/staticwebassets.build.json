@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "CZKqhyQAj6OMrZIEDg+ZYJNNRnW72Tox3hE1rqHle0I=",
+  "Hash": "kEWQ05dWaArtE5VFKH17Tf5sbMgBhQMVRXxsv4VHI6U=",
   "Source": "CRUD",
   "BasePath": "_content/CRUD",
   "Mode": "Default",
@@ -416,12 +416,12 @@
       "OriginalItemSpec": "wwwroot/assets/img/product-5.jpg"
     },
     {
-      "Identity": "/home/harsh/1-My-Files/codes/dot net/All Programs/CRUD/wwwroot/assets/img/profile-img.jpg",
+      "Identity": "/home/harsh/1-My-Files/codes/dot net/All Programs/CRUD/wwwroot/assets/img/profile.jpg",
       "SourceId": "CRUD",
       "SourceType": "Discovered",
       "ContentRoot": "/home/harsh/1-My-Files/codes/dot net/All Programs/CRUD/wwwroot/",
       "BasePath": "_content/CRUD",
-      "RelativePath": "assets/img/profile-img.jpg",
+      "RelativePath": "assets/img/profile.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -432,7 +432,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/assets/img/profile-img.jpg"
+      "OriginalItemSpec": "wwwroot/assets/img/profile.jpg"
     },
     {
       "Identity": "/home/harsh/1-My-Files/codes/dot net/All Programs/CRUD/wwwroot/assets/img/slides-1.jpg",

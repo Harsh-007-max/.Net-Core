@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("creative-CV")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aa47b89fa835234fbc6af33f6ebc0981b654397b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("creative-CV")]
 [assembly: System.Reflection.AssemblyTitleAttribute("creative-CV")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

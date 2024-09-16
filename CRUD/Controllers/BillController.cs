@@ -36,9 +36,11 @@ public class BillController : Controller
         List<OrderDropDownModel> orderDropDownList = _fillDropdown.FIllDropDown<OrderDropDownModel>(orderDropdown);
         string connectionString = this._configuration.GetConnectionString("ConnectionString")!;
         BillsModel billsModel = new BillsModel();
+        ViewBag.Title = "Add Bill";
         if (BillId != null)
         {
             billsModel = _sqlHelper.GetByID<BillsModel>("PR_Bills_SelectByPK", "@BillId", BillId ?? 1);
+            ViewBag.Title = "Update Bill";
         }
         ViewBag.UserList = userDropdownList;
         ViewBag.OrderList = orderDropDownList;

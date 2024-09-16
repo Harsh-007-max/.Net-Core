@@ -6,7 +6,7 @@
 <div id="main">
     <div class="card">
         <div class="card-body p-3">
-            <h5>Add New Order</h5>
+            <h5>@ViewBag.Title</h5>
             <form method="post" asp-action="OrderSave" asp-controller="Order">
                 @Html.HiddenFor(x=>x.OrderID)
                 <div class="container">
@@ -27,7 +27,7 @@
                     <div class="row m-2 my-4">
                         <div class="col">
                             @Html.LabelFor(m=>m.ShippingAddress,"Enter Shipping Address:",new{@class="form-label"})
-                            @Html.TextBoxFor(m=>m.ShippingAddress,new{@class="form-control",@placeholder="Shipping Address"})
+                            @Html.TextAreaFor(m=>m.ShippingAddress,new{@class="form-control",@placeholder="Shipping Address"})
                         </div>
                     </div>
                     <div class="row m-2 my-4">

@@ -7,6 +7,7 @@ namespace CRUD.Controllers;
 
 public class OrderDetailController : Controller
 {
+    #region configuration
     private IConfiguration _configuration;
     private SqlHelper _sqlHelper;
     private FillDropdown _fillDropdown;
@@ -17,13 +18,15 @@ public class OrderDetailController : Controller
         _sqlHelper = new SqlHelper(connectionString);
         _fillDropdown = new FillDropdown();
     }
-    // GET
+    #endregion
+    #region Index
     public IActionResult Index()
     {
         DataTable allOrderDetails = this._sqlHelper.ExecuteStoredProcedure("PR_OrderDetail_SelectAll")!;
         return View(allOrderDetails);
     }
-
+    #endregion
+    #region AddEditOrderDetail
     public IActionResult AddEditOrderDetail(int? orderDetailId)
     {
         DataTable userDropdown = _sqlHelper.ExecuteStoredProcedure("PR_User_DropDown")!;
@@ -33,16 +36,19 @@ public class OrderDetailController : Controller
         DataTable productDropdown = _sqlHelper.ExecuteStoredProcedure("PR_Product_DropDown")!;
         List<ProductDropDownModel> productDropdownList = _fillDropdown.FIllDropDown<ProductDropDownModel>(productDropdown);
         OrderDetailModel orderDetailModel = new OrderDetailModel();
+        ViewBag.Title ="Add OrderDetail";
         if (orderDetailId != null)
         {
             orderDetailModel = _sqlHelper.GetByID<OrderDetailModel>("PR_OrderDetail_SelectByPK", "@OrderDetailID", orderDetailId ?? 1);
+            ViewBag.Title ="Update OrderDetail";
         }
         ViewBag.UserList = userDropdownList;
         ViewBag.OrderList = orderDropdownList;
         ViewBag.ProductList = productDropdownList;
         return View(orderDetailModel);
     }
-
+    #endregion
+    #region OrderDetailSave
     public IActionResult OrderDetailSave(OrderDetailModel orderDetailModel)
     {
         if (ModelState.IsValid)
@@ -68,7 +74,8 @@ public class OrderDetailController : Controller
         }
         return RedirectToAction("AddEditOrderDetail", orderDetailModel);
     }
-
+    #endregion
+    #region DeleteOrderDetail
     public IActionResult DeleteOrderDetail(int orderDetailId)
     {
         var deleteObj = new
@@ -78,4 +85,5 @@ public class OrderDetailController : Controller
         _sqlHelper.PerformSqlOperation(deleteObj, "PR_OrderDetail_DeleteByPK", delete: true);
         return RedirectToAction("Index");
     }
+    #endregion
 }

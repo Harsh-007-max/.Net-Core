@@ -7,6 +7,7 @@ namespace CRUD.Controllers;
 
 public class CustomerController : Controller
 {
+    #region configuration
     private IConfiguration _configuration;
     private SqlHelper _sqlHelper;
     private FillDropdown _fillDropdown;
@@ -17,25 +18,32 @@ public class CustomerController : Controller
         _sqlHelper = new SqlHelper(connectionString);
         _fillDropdown = new FillDropdown();
     }
+    #endregion
+    #region Index
     // GET
     public IActionResult Index()
     {
         DataTable allCustomers = this._sqlHelper.ExecuteStoredProcedure("PR_Customer_SelectAll")!;
         return View(allCustomers);
     }
-
+    #endregion
+    #region AddEditCustomer
     public IActionResult AddEditCustomer(int? CustomerID)
     {
         DataTable userDropdown = _sqlHelper.ExecuteStoredProcedure("PR_User_DropDown")!;
         List<UserDropDownModel> userDropDownList = _fillDropdown.FIllDropDown<UserDropDownModel>(userDropdown);
         CustomerModel customer = new CustomerModel();
+        ViewBag.Title = "Add Customer";
         if (CustomerID != null)
         {
             customer = _sqlHelper.GetByID<CustomerModel>("PR_Customer_SelectByPK", "@CustomerID", CustomerID ?? 1);
+            ViewBag.Title = "Update Customer";
         }
         ViewBag.UserList = userDropDownList;
         return View(customer);
     }
+    #endregion
+    #region CustomerSave
     public IActionResult CustomerSave(CustomerModel customer)
     {
         if (ModelState.IsValid)
@@ -64,7 +72,8 @@ public class CustomerController : Controller
         }
         return RedirectToAction("AddEditCustomer", customer);
     }
-
+    #endregion
+    #region DeleteCustomer
     public IActionResult DeleteCustomer(int customerId)
     {
         // Dictionary<string,object> parameters = new Dictionary<string,object>
@@ -79,4 +88,5 @@ public class CustomerController : Controller
         _sqlHelper.PerformSqlOperation(deleteObj, "PR_Customer_DeleteByPK", delete: true);
         return RedirectToAction("Index");
     }
+    #endregion
 }
